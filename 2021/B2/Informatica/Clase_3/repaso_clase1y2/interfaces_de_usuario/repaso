@@ -1,0 +1,5 @@
+En las interfaces mas que todo vimos como usar la terminal de Bash. Vimos comandos como ls que lista
+los archivos de una carpeta; mkdir para crear directorios; touch para crear archivos; rm para eliminar
+archivos; mv para mocer archivos y rebombrar; cd para cambiar entre carpetas; pwd para ver el lugar
+donde estamos trabajando. Tambien vimos las opcines que tienen estos comandos como ls -R para listar
+todos contenidos de las carpetas.
