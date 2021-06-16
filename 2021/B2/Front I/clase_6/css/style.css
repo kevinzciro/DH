@@ -1,0 +1,358 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.barra-idioma {
+    background-color: black; 
+    color: white; 
+    display: block; 
+    width: 100%;
+}
+
+#Pagina { 
+    display:inline-flex;
+    
+    line-height: 48px;
+    position:absolute;
+    left:100px;
+}
+
+.menu { 
+    display:inline-block;
+    width: 100%; 
+    text-align: right;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+.menu ul a::after { 
+    content:'';
+    display: inline-block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #ccc; 
+    margin: 3px;
+}
+
+.menu ul li {
+    display:inline-block;
+}
+
+.menu ul li a{
+    display:block;
+    overflow: hidden;
+    color: white;
+    text-decoration:none;
+    padding:5px 10px;
+}
+
+
+.menu ul ul {
+    display:none;
+    position:absolute;
+}
+
+.menu ul ul li {
+    float:none;
+    display: list-item;
+    
+}
+
+
+.menu ul ul a {
+    line-height:120%;
+    color:black;
+    overflow: visible;
+}
+
+.menu ul ul a::after { 
+    content:'';
+    display: none;
+}
+
+.menu ul li:hover > ul {
+    display:list-item;
+    background-image: linear-gradient(currentcolor, grey);
+    opacity: 90%;
+    position: absolute;
+}
+
+.menu ul li:hover > a {
+    text-decoration: underline;
+}
+
+
+.barra-logo {
+    background-color: orange;  
+    display: block; 
+    width: 100%;}
+
+
+#imagen-logo {
+    position:absolute;
+    display:inline-block; 
+    width: 20%; 
+    line-height: 48px;
+    left: 50px;
+    top: 75px;
+}
+
+#opciones a::after{
+    display:none;
+}
+
+#opciones li{
+    color: orange;
+}
+
+#imagen-central {
+    width: 100%;
+    position: static;
+    overflow: scroll;
+}
+
+#placer {
+    position: absolute;
+    top:350px;
+    left: 835px;
+    background-color: white;
+    font-size: 39px;
+    padding:7px 12px;
+    border-radius: 5px;
+}
+
+#descuentos{
+    position: absolute;
+    top:430px;
+    left: 977px;
+    font-size: 20px;
+}
+
+#descuentos a {
+    text-decoration:none;
+    color:black;
+}
+
+#descuentos:hover > a {
+    text-decoration: underline;
+}
+
+#comederos{
+    position: absolute;
+    top: 470px;
+    left: 1025px;
+    font-size: 20px;
+    background-color: orange;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+#comederos a{
+    font-weight: lighter;
+    color:white;
+    text-decoration:none;
+    text-align: center;
+}
+
+#comederos:hover > a {
+    text-decoration: underline;
+}
+
+.destacados{
+    text-align: center;
+}
+
+.destacados img{
+    width:10%;
+}
+
+.destacados h1{
+    font-size: 40px;
+}
+
+
+.destacados nav a{
+    text-decoration: none;
+    color:grey;
+    display:inline-block;
+    padding: 5px 5px;
+}
+
+.destacados nav a:hover{
+    text-decoration: underline;
+}
+
+.cards{
+    text-align: center;
+}
+
+.cards div{
+    text-align: center;
+    display:inline-block;
+    width: 30%;
+    margin: 5px 10px;
+}
+
+
+.cards div img{
+    width: 100%;
+    text-align: center;
+    position:static;
+}
+
+.cards div div{
+    position:sticky;
+    text-align: center;
+    top: 1400px;
+    width: 100%;
+    margin: 5px 10px;
+    background-color: #FBFAF6;
+}
+
+.cards div a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.cards a div span{
+    position:static;
+    color:orange;
+}
+
+.cards a div:hover{
+    text-decoration: underline;
+}
+
+
+.formulario{
+    text-align: center;
+}
+
+.formulario h2{
+    color: #3C2313;
+    font-size: 30px;
+}
+
+
+
+.formulario form input{
+    background-color: #3C2313;
+    color:white;
+    border: none;
+    background-image: "#label" ;
+    width: 35%;
+    padding: 20px 20px;
+    border-radius: 20px;
+}
+
+.formulario button[type='reset']{
+    background-color: grey;
+    border: none;
+    padding: 7px 30px;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.formulario button[type='submit']{
+    background-color:orange;
+    border: none;
+    padding: 7px 40px;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.barra-suscripcion{
+    background-color: orange;
+    color:white;
+    padding: 15px 15px;
+}
+
+.barra-suscripcion div{
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.barra-suscripcion div img{
+    padding: 10px 5px;
+    width: 28x;
+    height: 23px;
+    vertical-align: middle;
+}
+
+
+.barra-suscripcion div span{
+    padding: 20px 5px;
+    font-size: 20px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+
+.barra-suscripcion #entrada-correo{
+    text-align: right;
+    width: 65%;
+}
+
+.barra-suscripcion input{
+    border:none;
+    padding: 10px 80px;
+    border-radius: 15px;
+}
+
+.barra-suscripcion button{
+    border:none;
+    background-color: #3C2313;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 18px;
+}
+
+.info-local{
+    background-color:#3C2313;
+    color: white;
+}
+
+
+.info-local div img{
+    margin-left: 60px;
+    width:80px;
+    height: 80px;
+    padding: 10px 10px;
+}
+
+.info-local div div{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+}
+
+.info-local div div h3{
+    margin: 0;
+}
+
+.info-local div div span{
+    vertical-align: top;
+    padding: 0;
+    font-size: 15px;
+    color: gray;
+}
+
+#derechos{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+}
