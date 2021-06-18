@@ -1,3 +1,7 @@
+*{
+    font-family: 'Benne';
+}
+
 body {
     margin:0;
     padding:0;
@@ -5,9 +9,9 @@ body {
 }
 
 header{
-    background-color: #E5E5E5;
     text-align: center;
-    
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
 }
 
 header img{
@@ -81,7 +85,7 @@ footer img{
     margin-right: 5px;
 }
 
-a{
+#links-paginas{
     text-align: center;
     text-decoration: none;
     color: #005677;
@@ -91,6 +95,23 @@ a{
     font-size: 25px;
 }
 
-a:hover{
+a i{
+    color: white;
+    margin:0;
+    padding: 0;
+}
+
+#links-paginas:hover{
     text-decoration: underline;
+}
+
+p{
+    text-align: center;
+    margin-left: 160px;
+    margin-right: 200px;
+    font-size: 25px;
+}
+
+section{
+    margin-bottom: 160px;
 }
