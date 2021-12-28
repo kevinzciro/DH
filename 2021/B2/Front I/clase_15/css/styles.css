@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+header{
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 3px 10px grey;
+}
+
+#promociones{
+    background-color: #1CD1B0;
+    padding: 0.5% 0.5% 0.5% 1.5%;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+h1{
+    background-color: #00669F;
+    color: white;
+    width: 100%;
+    padding: 1% 0% 1% 1.5%;
+    font-weight: bold;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    padding: 0.5rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0% 8% 0%;
+    flex-direction: column;
+}
+
+form input{
+    padding: 0.5% 15% 0.5% 0.5%;
+}
+
+form select{
+    padding: 0.5% 21.3% 0.5% 0.5%;
+}
+
+form button{
+    background-color: #1CD1B0;
+    border: none;
+    padding: 0.5rem 10rem 0.5rem 10rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+#resetear{
+    padding: 0.5rem 4rem 0.5rem 4rem;
+    margin: 0 0.5rem 0 0;
+    background-color: #888888;
+    color: white;
+    font-weight: bold;
+}
+
+#registro{
+    padding: 0.5rem 4rem 0.5rem 4rem;
+    font-weight: bold;
+}
+
+form h2{
+    text-align: left;
+    font-size: 3rem ;
+}
+
+form textarea{
+    width: 27.3%;
+    height: 10rem;
+    background-color: white;
+}
+
+form p a{
+    text-decoration: none;
+}
+
+footer{
+    background-color: #00669F;
+    color: white;
+    padding: 1% 0 1% 1.5%;
+    font-weight: bold;
+    z-index: 200;
+    text-align: center;
+}

@@ -1,0 +1,163 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema universolector
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema universolector
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `universolector` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `universolector` ;
+
+-- -----------------------------------------------------
+-- Table `universolector`.`autor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `universolector`.`autor` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NULL DEFAULT NULL,
+  `apellido` VARCHAR(100) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `universolector`.`editorial`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `universolector`.`editorial` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `razon_social` VARCHAR(100) NULL DEFAULT NULL,
+  `telefono` VARCHAR(100) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `universolector`.`libro`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `universolector`.`libro` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `ISBN` VARCHAR(13) NULL DEFAULT NULL,
+  `titulo` VARCHAR(200) NULL DEFAULT NULL,
+  `anio_Escritura` DATE NULL DEFAULT NULL,
+  `codigo_autor` INT NULL DEFAULT NULL,
+  `anio_Edicion` DATE NULL DEFAULT NULL,
+  `codigo_editorial` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_autor_idx` (`codigo_autor` ASC) VISIBLE,
+  INDEX `fk_editorial_idx` (`codigo_editorial` ASC) VISIBLE,
+  CONSTRAINT `fk_autor`
+    FOREIGN KEY (`codigo_autor`)
+    REFERENCES `universolector`.`autor` (`id`),
+  CONSTRAINT `fk_editorial`
+    FOREIGN KEY (`codigo_editorial`)
+    REFERENCES `universolector`.`editorial` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `universolector`.`socio`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `universolector`.`socio` (
+  `codigo` INT NOT NULL AUTO_INCREMENT,
+  `DNI` INT NULL DEFAULT NULL,
+  `apellido` VARCHAR(100) NULL DEFAULT NULL,
+  `nombre` VARCHAR(100) NULL DEFAULT NULL,
+  `direccion` VARCHAR(200) NULL DEFAULT NULL,
+  `localidad` VARCHAR(100) NULL DEFAULT NULL,
+  PRIMARY KEY (`codigo`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `universolector`.`prestamo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `universolector`.`prestamo` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `codigo_socio` INT NULL DEFAULT NULL,
+  `fecha` DATETIME NULL DEFAULT NULL,
+  `fecha_devolucion` DATE NULL DEFAULT NULL,
+  `fecha_tope` DATE NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_socio_idx` (`codigo_socio` ASC) VISIBLE,
+  CONSTRAINT `fk_socio`
+    FOREIGN KEY (`codigo_socio`)
+    REFERENCES `universolector`.`socio` (`codigo`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `universolector`.`volumen`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `universolector`.`volumen` (
+  `id` INT NOT NULL,
+  `codigo_libro` INT NULL DEFAULT NULL,
+  `deteriorado` TINYINT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_libro_idx` (`codigo_libro` ASC) VISIBLE,
+  CONSTRAINT `fk_libro`
+    FOREIGN KEY (`codigo_libro`)
+    REFERENCES `universolector`.`libro` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `universolector`.`prestamo_volumen`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `universolector`.`prestamo_volumen` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `codigo_prestamo` INT NULL DEFAULT NULL,
+  `codigo_volumen` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_prestamo_idx` (`codigo_prestamo` ASC) VISIBLE,
+  INDEX `fk_volumen_idx` (`codigo_volumen` ASC) VISIBLE,
+  CONSTRAINT `fk_prestamo`
+    FOREIGN KEY (`codigo_prestamo`)
+    REFERENCES `universolector`.`prestamo` (`id`),
+  CONSTRAINT `fk_volumen`
+    FOREIGN KEY (`codigo_volumen`)
+    REFERENCES `universolector`.`volumen` (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `universolector`.`telefono_Socio`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `universolector`.`telefono_Socio` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `NroTelefono` VARCHAR(100) NULL DEFAULT NULL,
+  `codigo_socio` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_codigo_socio_idx` (`codigo_socio` ASC) VISIBLE,
+  CONSTRAINT `fk_codigo_socio`
+    FOREIGN KEY (`codigo_socio`)
+    REFERENCES `universolector`.`socio` (`codigo`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS; 

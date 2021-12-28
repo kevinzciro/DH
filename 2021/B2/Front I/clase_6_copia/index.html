@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lan='esp'>
+<!--Pagina web de comidas y juguetes para perros propuesta en la clase de Front I, 
+    todo lo hice pensando en cajas y por eso meto los elementos dentro de divs o de spans. 
+    Tanto los divs o span se pueden borrar para usar CSS-->
+
+
+<!-- Donde va toda la informacion para que el navegador lo interprete-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel='icon' type='image/png' href='img/pawprint 4.png'>
+    <title>Front Cat&Dog</title>
+</head>
+
+
+<!-- Cuerpo, donde va todo lo que se va a ver en la pagina -->
+<body>
+    <!--Cabecera esta dividida en dos 'cajas' horizontales o divs-->
+    <header>
+        <!-- esta primera 'caja' horizontal la dividi en dos cajas, uno para el texto y otro para los seleccionables-->
+        <div class='barra-idioma'>
+            <!--El texto-->
+            <div id="Pagina">Grandes ofertas en comederos</div>
+
+            <!--Seleccionables de idioma y moneda-->
+            <nav class='menu'>
+                <ul>
+                    <li> 
+                        <a id='opciones-idioma' href="#">Idioma</a>
+                        <ul>
+                            <li><a href='#'>Español</a></li>
+                            <li><a href='#'> English </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id='opciones-idioma' href='#'>Moneda</a>
+                        <ul>
+                            <li><a href="#">ARG$</a></li>
+                            <li><a href="#">COL$</a></li>
+                            <li><a href="#">DOL$</a></li>
+                            <li><a href="#">DOL$</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            </span>
+        </div>
+
+        
+
+        <!--La segunda caja horizontal de la cabecera tambien la dividi en dos secciones; el logo y mas seleccionables-->
+        <div class='barra-logo'>
+        <!--Logo-->
+            <span id='imagen-logo'><a href="#Pagina"><img src="img/Logo.png" width="200"  alt="
+            Logo"></a></span>
+            <!--Seleccionables-->
+
+            <a  href="#"><i class="fas fa-bars fa-2x"></i></a>
+
+            <!--Seleccionable de categorias-->
+            <nav class='menu-logo'>
+                <ul>
+                    <li>
+                        <a href=" "><!--<img src='img/pawprint 4.png' alt='huella blanca'>--> Categorias </a>
+                    </li> 
+                    <li>
+                        <a href=" "><!-- <img src='img/pawprint 4.png' alt='huella blanca'>--> Pets</a>
+                    <li>
+                        <a href=" "><!--<img src='img/pawprint 4.png' alt='huella blanca'>--> Nosotros</a>
+                    </li>
+                    <li>
+                        <a href=" "><!--<img src='img/pawprint 4.png' alt='huella blanca'>--> Contactanos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Imagen central de la pagina-->
+    <main>
+        <div id='placer'>¡Es un placer tenerte aquí! </div>
+        <div id='descuentos'><a href="#"> Comederos en descuentos!</a></div>
+        <div id='comederos'><a href="#">COMEDEROS</a></div>
+    </main>
+
+    <!--Informacion para poner dentro de la imagen con CSS-->
+    
+
+    <div class='destacados'>
+        <img src='img/image 5.png' alt='patita'>
+
+        <!--titulo principal o que mas destaca de los productos mas destacados-->
+        <p>Productos</p>
+        <p>Destacados</p>
+
+        <!--Seleccionables de los productos mas destacados en cada categoria-->
+        <nav>
+            <a href=" "> Comederos  </a>  
+            <a href=" "> Accesorios  </a>
+            <a href=" "> Comida</a> 
+        </nav>
+    </div>
+
+    <!--Imagenes seleccionables con productos, se debe dar estilo con CSS-->
+    <!--En un primer momento se pueden pensar como 1 caja dividida en 3 secciones, una para cada imagen-->
+    <div class='cards-container'>
+        <div>
+            <!--Imagen seleccionable de los churrasquitos-->
+            <a href='#'>
+                <div class='card'>
+                    <img src='img/churrasquito.png' alt='juguetechurrasquito'>
+                    <p class="card-name">Churrasquito</p>
+                    <p class="card-price">150$</p>
+                </div>
+            </a>
+        </div>
+
+        <div>
+            <!--Imagen seleccionable de los comederos para perros-->
+            <a href='#'>
+                <div class='card'>
+                    <img src='img/comedero.png' alt='comidaperro'>
+                    <p class="card-name">Comedero para perro</p>
+                    <p class="card-price">250$</p>
+                </div>
+            </a>
+        </div>
+        
+        <div>
+            <!--Imagen seleccionable de los juguetes de hueso-->
+            <a href='#'>
+                <div class='card'>
+                    <img src='img/Huesito.png' alt='juguetehuesito'>
+                    <p class="card-name">huesito</p> 
+                    <p class="card-price">650$</p> 
+                </div>
+            </a>
+            <!--Informacion de los juguetes de hueso-->
+            
+            
+        </div>
+        
+    </div>
+
+
+    <!--El formulario, lo meto dentro de un div para darle una idea de una caja-->
+        <!--Formulario de contacto-->
+        <form method="POST">
+            <!--Titulo del formulario-->
+            <h2>Contáctanos</h2>
+
+            <!--Seccion del nombre-->
+            <input type="text" id='nombreApellido' name='user_name' placeholder="Nombre y Apellido" required> 
+
+
+                <!--Seccion del correo-->
+            <input type="email" id='CorreoElectronico' name='user_email' placeholder="Ingresa tu correo electronico" required> 
+            
+
+            <!--Seccion del Telefono-->
+            <input type="tel" id='Telefono' name='user_phone' placeholder="Telefono" required> 
+
+            <div>
+                <!--boton para poner en blanco el formulario-->
+                <button type="reset">Resetear</button>
+
+                <!--Boton para enviar formulario-->
+                <button type="submit">Envíar</button>
+            </div>
+
+        </form>
+
+
+        <!--Imagen e informacion de la suscibcion de correo-->
+        <div class='barra-suscripcion'>
+            <div>
+                <img src='img/Group.png' alt='correo'> 
+                <span>Suscribete para mas novedades</span>
+            </div>
+
+            <!--Entrada para ingresar el correo y suscribirse con boton al lado-->
+            <form method="POST">
+                <input type="text" id='CorreoElectronico' name='user_email' placeholder="Ingresa tu correo electronico" required>
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+
+
+    <!--Aqui empieza el footer-->
+    <footer>
+        <a href="#"><img id='logo-footer' src="img/Logo (1).png"></a>
+        <div class='info-local'>
+            <div>
+                <!--Seccion de la ubicacion del local-->
+                <i class="fas fa-map-marker-alt fa-4x"></i>
+                <div>
+                    <h3>Localidad</h3>
+                    <span>Calle - Provincia</span>
+                </div>
+            </div>
+
+            <!--Seccion del telefono del local-->
+            <div>
+                <!--Seccion de la ubicacion del local-->
+                <i class="fas fa-phone-volume fa-4x"></i>
+                <div>
+                    <h3>Telefono</h3>
+                    <span>Numero de telefono</span>
+                </div>
+
+
+            </div>
+
+            <!--Seccion de l correo del local-->
+            <div>
+                <!--Seccion de la ubicacion del local-->
+                <i class="fas fa-envelope fa-3x"></i>
+                <div>
+                    <h3>Correo electronico</h3>
+                    <span>Direccion de correo electronico</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div id='derechos'>Todos los derechos reservados Front End</div>
+    </footer>
+
+    <ol type="A">
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ol>
+
+
+</body>
+</html>

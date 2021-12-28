@@ -1,0 +1,472 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/** Diseño movile first, se ocultan varias barras del header **/
+
+/** Header con sus respectivas barras **/
+.barra-idioma{
+    display: none;
+}
+
+.barra-logo{
+    display: flex;
+    width: 100%;
+    background-color: #F0A83E;
+    padding: 3% 0 3% 0;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#imagen-logo{
+    margin: 0 0 0 2rem;
+}
+
+.fa-bars{
+    color: white;
+    margin: 0 2rem 0 0;
+}
+
+.menu-logo{
+    display: none;
+}
+
+
+/** Parte de la bienvenida, se definio como el main del sitio**/
+main{
+    background-image: url('/clase_6_copia/img/image_2.png');
+    background-size: 350%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#placer {
+    background-color: white;
+    padding: 3%;
+    font-size: 2rem;
+    margin: 40% 2% 2% 0%;
+    border-radius: 0.5rem;
+}
+
+#descuentos{
+    padding: 3%;
+    font-size: 1.3rem;
+    margin: 0.5% 2% 2% 0%;
+}
+
+#descuentos a {
+    color: white;
+}
+
+#descuentos a:hover{
+    text-decoration: underline;
+}
+
+#comederos{
+    background-color: #F0A83E;
+    padding: 1.2rem;
+    font-size: 1.3rem;
+    margin: 0.5% 10% 20% 0%;
+    border-radius: 0.4rem;
+}
+
+#comederos a{
+    color: white;
+}
+
+#comederos a:hover{
+    text-decoration: underline;
+}
+
+
+/** Seccion de destacados con sus cards**/
+.destacados{
+    margin: 10% 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.destacados img{
+    margin: 0 0 5% 0;
+}
+
+.destacados p{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #3C2313;
+}
+
+.destacados nav{
+    margin: 5% 0 10% 0;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.destacados nav a{
+    color: #666666;
+}
+
+.destacados nav a:hover{
+    text-decoration: underline;
+}
+
+/** Las cards estan contenidas en un flex y a su vez cada card es un contenedor flex **/
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBFAF6;
+    margin: 0 0 10% 0;
+}
+
+.card-name{
+    color: #3C2313;
+}
+
+.card-price{
+    color: #F0A83E;
+}
+
+
+/** Formulario de contacto **/
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form h2{
+    color: #3C2313;
+    font-size: 3.5rem;
+    margin: 5%;
+}
+
+form input{
+    background-color: #3C2313;
+    color:white;
+    border: none;
+    width: 75%;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin: 1% 0 1% 0;
+}
+
+form div{
+    width: 100%;
+    text-align: center;
+}
+
+form button[type='reset']{
+    background-color: grey;
+    border: none;
+    padding: 0.5rem 3rem;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    margin: 5% 0% 5% 0%;
+}
+
+form button[type='submit']{
+    background-color:orange;
+    border: none;
+    padding: 0.5rem 3.5rem;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    margin: 5% 0% 5% 0;
+}
+
+
+/** Barra de suscripcion por correo electronico **/
+.barra-suscripcion{
+    background-color: #F0A83E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0 2% 0;
+}
+
+.barra-suscripcion div{
+    color: white;
+    margin: 5% 0% 3% 0%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.barra-suscripcion form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.barra-suscripcion form input{
+    background-color: white;
+    color: grey;
+    width: 45%;
+}
+
+.barra-suscripcion form button{
+    background-color: #3C2313;
+    padding: 0.6rem 4.5%;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+/** Seccion del footer **/
+footer{
+    background-color: #3C2313;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0 0% 0;
+}
+
+#logo-footer{
+    padding: 0 0 1rem 0;
+}
+
+.info-local{
+    padding: 0 0 1rem 0;
+}
+
+.info-local div{
+    display: flex;
+    width: 100%;
+    color: white;
+    flex-direction: row;
+    margin: 0 0 5% 0;
+}
+
+.info-local div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 0 5%;
+}
+
+.info-local div div span{
+    color: grey;
+}
+
+.fa-4x, .fa-3x{
+    background-color: grey;
+    padding: 3% 5%;
+    border-radius: 100%;
+}
+
+#derechos{
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (min-width: 768px){
+
+    /**Diseño para Desktop, se muestran y modifican las barras que antes se ocultaron**/
+    /** Barra para la seleccion de idioma y moneda **/
+    .barra-idioma{
+        display: flex;
+        background-color: black;
+        color: white;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #Pagina{
+        padding: 0 0 0 5%;
+        font-weight: bold;
+    }
+
+    .barra-idioma nav{
+        display: inline;
+        width: 18%;
+        padding: 0 5% 0 0;
+    }
+
+    .barra-idioma nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .barra-idioma nav ul a{
+        color: white;
+        font-weight: bold;
+    }
+
+    .barra-idioma nav ul li #opciones-idioma:after{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        content: " \f107";
+    }
+
+    .barra-idioma nav ul{
+        list-style: none;
+    }
+
+    .barra-idioma nav ul ul{
+        display: none;
+    }
+
+    .barra-idioma nav ul li:hover > ul {
+        display:list-item;
+        background-image: linear-gradient(black, grey);
+        opacity: 80%;
+        position: absolute;
+    }
+
+    .barra-idioma nav ul li ul li:hover{
+        background-color: grey;
+    }
+
+    /** Barra del logo **/
+    .barra-logo .fa-bars{
+        display: none;
+    }
+
+    .menu-logo{
+        display: flex;
+        flex-direction: row;
+        width: 45%;
+    }
+
+    .menu-logo ul{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    .menu-logo ul a{
+        color: white;
+    }
+
+    .menu-logo ul a:before{
+        content: url('/clase_6_copia/img/pawprint\ 4.png');
+    }
+
+    main{
+        background-size: 100%;
+    }
+
+    #placer {
+        padding: 1%;
+        font-size: 1.5rem;
+        margin: 8% 2% 0% 0%;
+    }
+
+    #descuentos{
+        padding: 3%;
+        font-size: 1rem;
+        margin: 0% 5% 0% 0%;
+    }
+
+    #comederos{
+        font-size: 1rem;
+        margin: 0% 11% 9% 0%;
+    }
+
+
+    .destacados{
+        margin: 5% 0 0 0;
+    }
+
+    .destacados nav{
+        width: 40%;
+        margin: 5% 0 5% 0 ;
+    }
+
+    .cards-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    form h2{
+        font-size: 3rem;
+        margin: 3%;
+    }
+
+    form input{
+        width: 35%;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+        margin: 0% 0 1% 0;
+    }
+
+    .barra-suscripcion{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+        padding: 0% 0 0% 0;
+    }
+
+    .barra-suscripcion div{
+        width: 40%;
+        margin: 2% 0% 2% 2%;
+    }
+
+    .barra-suscripcion form{
+        justify-content: flex-end;
+        align-content: center;
+        margin: 2% 0% 2% 0%;
+    }
+
+    .barra-suscripcion form input{
+        width: 35%;
+        padding: 1%;
+        margin: 0 0% 0 1%;
+    }
+    
+    .barra-suscripcion form button{
+        padding: 0.3rem 2.5%;
+        font-size: 1.1rem;
+        margin: 0 3% 0 1%;
+    }
+    
+
+    footer{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 2% 0 0 0;
+    }
+
+    #derechos{
+        flex: 1 0 100%;
+        order: 3;
+    }
+
+    #logo-footer{
+        padding: 0 2rem 1rem 2%;
+    }
+    
+    .info-local{
+        padding: 0 2% 1rem 2%;
+    }
+}

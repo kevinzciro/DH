@@ -11,16 +11,21 @@ body {
 header{
     text-align: center;
     background-image: url("../img/fondo.jpg");
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: absolute;
+    background-repeat: no-repeat;
 }
 
 header img{
-    width: auto;
-    height: 150px;
+    width: 20%;
+    height: 5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
 }
 
 h1{
-    background-color: #C4C4C4;
+    background-color: #c4c4c4;
     text-align: center;
     color: #005677;
     margin: 0;
@@ -89,7 +94,6 @@ footer img{
     text-align: center;
     text-decoration: none;
     color: #005677;
-    text-align: center;
     margin-left: 160px;
     margin-right: 200px;
     font-size: 25px;
@@ -105,13 +109,13 @@ a i{
     text-decoration: underline;
 }
 
-p{
-    text-align: center;
+div p{
     margin-left: 160px;
-    margin-right: 200px;
-    font-size: 25px;
+    left:2px;
 }
 
-section{
-    margin-bottom: 160px;
+.sobremi-texto{
+    text-align: center;
+    margin:0;
+    margin-bottom: 130px;
 }

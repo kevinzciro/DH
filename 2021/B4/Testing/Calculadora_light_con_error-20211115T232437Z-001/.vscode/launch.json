@@ -1,0 +1,15 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "file:///home/kevin/Documents/DH/2021/B4/Testing/Calculadora_light_con_error-20211115T232437Z-001/Calculadora_light_con_error/get-started.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

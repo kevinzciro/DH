@@ -1,0 +1,39 @@
+let bob = [50, 98, 32]
+let alicia = [45, 82, 46]
+
+
+function encontrarGanador(a, b){
+
+    let comparacion = [[0,0,0],[0,0,0]]
+    let puntosA = 0, puntosB = 0
+
+    for(let i=0; i<=2; i++){
+
+        if( a[i] > b[i] ){
+            comparacion[0][i] = 1
+            comparacion[1][i] = 0
+            puntosA = puntosA + 1
+        }
+
+        else if( a[i] === b[i] ){
+            comparacion[0][i] = 'son iguales'
+            comparacion[1][i] = 'son iguales'
+        }
+
+        else{
+            comparacion[0][i] = 0
+            comparacion[1][i] = 1
+            puntosB = puntosB + 1
+        }
+    }
+
+    if(puntosA > puntosB){
+        return ('El ganador es Alicia con ' + puntosA + ' puntos') 
+    }
+    else{
+        return ('El ganador es Bob con ' + puntosB + ' puntos')
+    }
+
+}
+
+console.log(encontrarGanador(alicia, bob))

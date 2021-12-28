@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+header{
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 3px 10px grey;
+}
+
+#promociones{
+    background-color: #1CD1B0;
+    padding: 0.5% 0.5% 0.5% 1.5%;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+h1{
+    background-color: #00669F;
+    color: white;
+    width: 100%;
+    padding: 1% 0% 1% 1.5%;
+    font-weight: bold;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#formulario{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+form{
+    padding: 1% 4% 1% 4%;
+    border-radius: 2rem;
+    color: white;
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5% 0% 5% 0%;
+    background-color: #00669F;
+    justify-content: center;
+}
+
+form h2, p{
+    width: 100%;
+    text-align: center;
+}
+
+form div{
+    width: 50%;
+    padding: 2% 0% 2% 0%;
+}
+
+form button{
+    background-color: #1CD1B0;
+    border: none;
+    padding: 0.5rem 10rem 0.5rem 10rem;
+    border-radius: 1rem;
+}
+
+form input{
+    padding: 5% 15% 5% 0.5%;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+#especie{
+    padding: 5% 25% 5% 0.5%;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: white;
+}
+
+#placeholder  {
+    color: #999;
+}
+
+#fecha{
+    padding: 5% 20% 5% 0.5%;
+    border-radius: 0.5rem;
+    border: none;
+    margin: 0 1rem 0 0;
+}
+
+#comentario{
+    border-radius: 0.5rem;
+    padding: 5% 5% 5% 5%;
+    border: none;
+    width: 82%;
+    height: 80%;
+}
+
+footer{
+    background-color: #00669F;
+    color: white;
+    padding: 1% 0 1% 1.5%;
+    font-weight: bold;
+    z-index: 200;
+    text-align: center;
+}

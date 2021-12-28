@@ -1,0 +1,21 @@
+.nav-bar{
+    width: 90%;
+    padding: 2% 0% 2% 10%;
+    display: grid;
+    grid-template-columns: 50% 45%;
+    grid-template-rows: 100%;
+    align-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    .name{
+        display: grid;
+    }
+    .options{
+        display: flex;
+        width: 100%;
+        grid-template-columns: 33% 33% 33%;
+        grid-gap: 5%;
+        justify-content: flex-end;
+        align-content: center;
+    }
+}
